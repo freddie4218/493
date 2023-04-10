@@ -1,0 +1,92 @@
+.outer-container {
+  height: 100vw;
+  width: 100vw;
+}
+
+.dashboard{
+  height: 100%;
+  width: 17%;
+  background: slategray;
+  float: left;
+  position: relative;
+  border-right: 0px transparent #ccc;
+}
+
+.header{
+  height: 8%;
+  width: 83%;
+  background: slategray;
+  position: relative;
+  float: right;
+  border-bottom: 0px transparent #ccc;
+}
+
+.taskboard {
+  height: 92%;
+  width: 83%;
+  background: black;
+  float: right;
+  position: relative;
+  background-color: lightslategray;
+}
+
+#selected_board {
+  color:#FFD382
+}
+
+#all_boards_text {
+  padding-top: 18%;
+  padding-left: 5%;
+  font-size: 20px;
+  color: #A1ACD1;
+  font-weight: bold;
+}
+
+.boards_text {
+  padding-top: 9%;
+  padding-left: 13%;
+  font-size: 25px;
+  color: #A1ACD1;
+}
+
+#add_new_task_text {
+  margin-top: 4.3%;
+  margin-left: 2%;
+  font-size: 30px;
+  background: slategray;
+}
+
+.all_columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  padding-left: 2%;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  max-height: 80vh;
+  font-size: 25px;
+  color: bisque;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+.task {
+  border: 1px solid transparent; /* Sets the border width, style, and color */
+  padding: 10px; /* Adds padding inside the box */
+  margin: 10px; /* Adds margin outside the box */
+  background-color: lightslategray; /* Sets the background color of the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.subtask{
+  font-size: 18px;
+  color: darkgray
+
+}
+
