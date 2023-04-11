@@ -1,0 +1,217 @@
+/* :root {
+  --dark: #374151;
+  --darker: #1F2937;
+  --darkest: #111827;
+  --grey: #6B7280;
+  --pink: #EC4899;
+  --purple: #8B5CF6;
+  --light: #EEE;
+}
+
+ .outer-container {
+  height: 100vw;
+  width: 100vw;
+}
+
+.dashboard {
+  height: 100%;
+  width: 17%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  float: left;
+  position: relative;
+  border-right: 0px transparent #ccc;
+}
+
+.header {
+  color: var(--pink);
+  background: #F2F2F2;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.taskboard {
+  height: 100%;
+  width: 80%;
+  background: #F2F2F2;
+  float: right;
+  position: relative;
+  background-color: #F2F2F2;
+}
+
+#selected_board {
+  color: #FFD382
+}
+
+#all_boards_text {
+  padding-top: 18%;
+  padding-left: 5%;
+  font-size: 20px;
+  color: #A1ACD1;
+  font-weight: bold;
+}
+
+.boards_text {
+  padding-top: 9%;
+  padding-left: 13%;
+  font-size: 25px;
+  color: #A1ACD1;
+}
+
+#add_new_task_text {
+  margin-top: 4.3%;
+  margin-left: 2%;
+  font-size: 30px;
+  background: slategray;
+  color: var(--pink);
+  font-size: 30px;
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.all_columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  padding-left: 1%;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 27.5vw;
+  max-height: 80vh;
+  font-size: 25px;
+  color: bisque;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+.task {
+  border: 1px solid transparent;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightslategray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.subtask {
+  font-size: 18px;
+  color: darkgray
+}
+
+
+.all_columns p {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+*/
+
+
+.outer-container {
+  height: 100vw;
+  width: 100vw;
+}
+
+.dashboard {
+  height: 100%;
+  width: 17%;
+  background: slategray;
+  float: left;
+  position: relative;
+  border-right: 0px transparent #ccc;
+}
+
+.header {
+  height: 8%;
+  width: 83%;
+  background: slategray;
+  position: relative;
+  float: right;
+  border-bottom: 0px transparent #ccc;
+}
+
+.taskboard {
+  height: 92%;
+  width: 83%;
+  background: black;
+  float: right;
+  position: relative;
+  background-color: lightslategray;
+}
+
+#selected_board {
+  color: #FFD382
+}
+
+#all_boards_text {
+  padding-top: 18%;
+  padding-left: 5%;
+  font-size: 20px;
+  color: #A1ACD1;
+  font-weight: bold;
+}
+
+.boards_text {
+  padding-top: 9%;
+  padding-left: 13%;
+  font-size: 25px;
+  color: #A1ACD1;
+}
+
+#add_new_task_text {
+  margin-top: 4.3%;
+  margin-left: 2%;
+  font-size: 30px;
+  background: slategray;
+}
+
+.all_columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  padding-left: 1%;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 27.5vw;
+  max-height: 80vh;
+  font-size: 25px;
+  color: bisque;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+.task {
+  border: 1px solid transparent;
+  /* Sets the border width, style, and color */
+  padding: 10px;
+  /* Adds padding inside the box */
+  margin: 10px;
+  /* Adds margin outside the box */
+  background-color: lightslategray;
+  /* Sets the background color of the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.subtask {
+  font-size: 18px;
+  color: darkgray
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/main_page.js'></script>
+
+<!-- CSS -->
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main_page_style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<!-- HTML -->
+
+<body>
+    <div class='outer-container'>
+
+        <div class="dashboard">
+            <div id='all_boards_text'>ALL BOARDS</div>
+            <div class='boards_text' id='selected_board'>My todo list</div>
+            <div class='boards_text'>Interviews</div>
+            <div class='boards_text'>Clubs</div>
+            <div class='boards_text'>+ Create New Board</div>
+        </div> <!-- end dashboard -->
+
+
+        <div class="header">
+            <button type='button' id='add_new_task_text'>
+                + Add New Task
+            </button>
+        </div> <!-- end header -->
+
+
+        <div class="taskboard">
+            <div class="all_columns">
+                <p id="TODO_num">TODO</p>
+                <ul class="column" id="TODO">
+                </ul>
+
+                <p id="DOING_num">DOING</p>
+                <ul class="column" id="DOING">
+                    <!-- <div class="task">
+                            Do EECS489 Practice Exams
+                            <br>
+                            <div class="subtask">2 of 3 subtasks done</div>
+                        </div> -->
+                </ul>
+
+                <p id="DONE_num">DONE</p>
+                <ul class="column" id="DONE">
+                </ul>
+            </div>
+        </div> <!-- end taskboard -->
+
+    </div> <!-- end outer-container -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

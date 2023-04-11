@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/view_task.js'></script>
+
+<head>
+    <title>Add Task Page</title>
+    <link rel="stylesheet" href="./viewTask_page.css">
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    </h1>
+    <div id="description"></div><br>
+
+    <div>Subtasks:</div>
+    <ul id="subtaskList">
+        <!-- <div>Subtask 1: Review lecture 10 slide</div>
+        <div>Subtask 2: Review lecture 11 slide</div> -->
+    </ul>
+
+    <!-- <section>
+        <label for="newSubtask">Add New Subtask:</label>
+        <input type="text" id="newSubtask" name="newSubtask">
+        <button onclick="addSubtask()"> Add </button>
+    </section> -->
+
+    <section>
+        <label for="Status">Status:</label>
+        <select id="Status" name="Status">
+            <option value="TODO">TODO</option>
+            <option value="DOING">DOING</option>
+            <option value="DONE">DONE</option>
+        </select>
+    </section>
+
+    <br>
+
+    <button type='button' id='returnToMain'>
+        Return to main page
+    </button>
+    <button type='button' id='delete'>
+        Delete Task
+    </button>
+
+    <!-- saved for high-fidelity prototype -->
+    <!-- <script>
+        function addSubtask() {
+            var newSubtask = document.getElementById("newSubtask").value;
+            var subtaskList = document.getElementById("subtaskList");
+            subtaskList.appendChild(createSubtask(newSubtask));
+        }
+
+        function createSubtask(newSubtask) {
+            var div = document.createElement("div");
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            div.appendChild(checkbox);
+            div.appendChild(document.createTextNode(newSubtask));
+
+            return div;
+        }
+    </script> -->
+
+</body>
+
+</html>

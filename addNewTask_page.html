@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+        <!-- JS -->
+        <script src='scripts/jquery.min.js'></script>
+        <script src='scripts/add_new_task.js'></script>
+
+<!-- CSS -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Add New Task</title>
+    <link rel="stylesheet" href="addNewTask_page.css">
+</head>
+<!-- HTML -->
+
+<body>
+    <div class='outer-container'>
+        <h1>Add New Task</h1>
+        <form>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <h2>Subtasks</h2>
+            <ul id="subtask-list">
+                <li>
+                    <label for="subtask1">Subtask 1:</label>
+                    <input type="text" id="subtask1" name="subtask1"><br>
+                </li>
+                <li>
+                    <label for="subtask2">Subtask 2:</label>
+                    <input type="text" id="subtask2" name="subtask2"><br>
+                </li>
+            </ul>
+            <button type='button' id="button1">Add New Subtask</button><br><br>
+            <!-- add Task Status -->
+            <label for="status">Task Status:</label>
+            <select id="status" name="status">
+                <option value="TODO">TODO</option>
+                <option value="DOING">DOING</option>
+                <option value="DONE">DONE</option>
+            </select><br><br>
+            <!-- date choose -->
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date"><br><br>
+            <button type='button' id="newTask">Create Task</button><br><br>
+            <button type='button' id="cancel">Cancel</button>
+        </form>
+    </div>
+</body>
+
+</html>
