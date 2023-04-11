@@ -1,8 +1,18 @@
 $(document).ready( function() {
     console.log("Ready!");
     document.getElementById("newTask").addEventListener("click", storeTask);
-    // document.getElementById("newTask").addEventListener("click", redirectToMain);
+    document.getElementById("button1").addEventListener("click", addSubTask);
+    document.getElementById("cancel").addEventListener("click", redirectToMain);
+
+    localStorage.setItem("CurrSubtaskNum", 2);
 });
+
+function addSubTask() {
+    let numSubtask = parseInt(localStorage.getItem("CurrSubtaskNum")) + 1;
+    localStorage.setItem("CurrSubtaskNum", numSubtask);
+    let subTasks = $('#subtask-list');
+    subTasks.append("<li><label for=subtask" + numSubtask + ">Subtask " + numSubtask + ": </label><input type='text' id=subtask" + numSubtask + " name=subtask" + numSubtask +"><br></li>")
+}
 
 
 function storeTask() {
@@ -14,6 +24,16 @@ function storeTask() {
     let description = document.getElementById("description").value;
     let status = document.getElementById("status").value;
     let due = document.getElementById("due-date").value;
+    let subTasks = [];
+    for (let i = 1; i <= parseInt(localStorage.getItem("CurrSubtaskNum")); i++) {
+        let subTaskID = "subtask" + i;
+        let subTaskConent = document.getElementById(subTaskID).value;
+        console.log("ID: ", subTaskID, ": ", subTaskConent);
+        if (subTaskConent.trim() !== '') {
+            subTasks.push(subTaskConent)
+        }
+        console.log(subTasks);
+      }
 
     let id = parseInt(localStorage.getItem("prev_id")) + 1;
     localStorage.setItem("prev_id", id);
@@ -24,7 +44,8 @@ function storeTask() {
         title: title,
         description: description,
         status: status,
-        due: due
+        due: due,
+        subTasks: subTasks
     };
 
     localStorage.setItem(id, JSON.stringify(task_obj));
@@ -48,7 +69,6 @@ function storeTask() {
     window.location.href = "main_page.html";
 }
 
-
-// function redirectToMain() {
-//     window.location.href = "main_page.html";
-// }
+function redirectToMain() {
+    window.location.href = "main_page.html";
+}

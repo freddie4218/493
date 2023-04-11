@@ -1,7 +1,11 @@
 // Main
 $(document).ready( function() {
-    newBoardButton = $('#add_new_board');
     console.log("Ready!");
+    localStorage.setItem("selectedTaskID", 0);
+    localStorage.setItem("currTask", 0);
+    localStorage.setItem("found", 0);
+
+    document.getElementById("add_new_task_text").addEventListener("click", redirectToAddTask);
     // Initialize
     if (localStorage.getItem("prev_id") === null) {
         localStorage.setItem("prev_id", 0);
@@ -19,8 +23,11 @@ $(document).ready( function() {
             let title = task.title;
             let description = task.description;
             let status = task.status;
+            let numOfSubtasks = task.subTasks.length;
             console.log(title);
-            TODO_col.append("<div class='task'>" + title + "<br><div class='subtask'>0 of 2 subtasks done</div></div>")
+            TODO_col.append("<div class='task' id=" + task.id + ">" + title + "<br><div class='subtask'>" + numOfSubtasks + " subtasks</div></div>")
+            console.log("ID: ", task.id);
+            document.getElementById(task.id).addEventListener("click", setSelectedIdAndRedirect);
         }
         // Then render the DOING column
         let DOING_col = $('#DOING');
@@ -29,8 +36,11 @@ $(document).ready( function() {
             let title = task.title;
             let description = task.description;
             let status = task.status;
+            let numOfSubtasks = task.subTasks.length;
             console.log(title);
-            DOING_col.append("<div class='task'>" + title + "<br><div class='subtask'>0 of 2 subtasks done</div></div>")
+            DOING_col.append("<div class='task' id=" + task.id + ">" + title + "<br><div class='subtask'>" + numOfSubtasks + " subtasks</div></div>")
+            console.log("ID: ", task.id);
+            document.getElementById(task.id).addEventListener("click", setSelectedIdAndRedirect);
         }
         // Finally render the DONE column
         let DONE_col = $('#DONE');
@@ -39,14 +49,13 @@ $(document).ready( function() {
             let title = task.title;
             let description = task.description;
             let status = task.status;
+            let numOfSubtasks = task.subTasks.length;
             console.log(title);
-            DONE_col.append("<div class='task'>" + title + "<br><div class='subtask'>0 of 2 subtasks done</div></div>")
+            DONE_col.append("<div class='task' id=" + task.id + ">" + title + "<br><div class='subtask'>" + numOfSubtasks + " subtasks</div></div>")
+            console.log("ID: ", task.id);
+            document.getElementById(task.id).addEventListener("click", setSelectedIdAndRedirect);
         }
     }
-    
-    document.getElementById("add_new_task_text").addEventListener("click", redirectToAddTask);
-    newBoardButton.click(CreateNewBoard)
-
 });
 
 
@@ -62,4 +71,17 @@ function CreateNewBoard() {
 
 function redirectToAddTask() {
     window.location.href = "addNewTask_page.html";
+}
+
+function setSelectedIdAndRedirect(event) {
+    event.preventDefault();
+    console.log("RECEIVED ID: ", event.target.id);
+    localStorage.setItem("selectedTaskID", event.target.id);
+    console.log("SELECTED ID: ", localStorage.getItem("selectedTaskID"));
+
+    if (!event.target.id) {
+        window.location.href = "main_page.html";
+    } else {
+        window.location.href = "viewTask_page.html";
+    }
 }

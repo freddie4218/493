@@ -10,31 +10,32 @@
 </head>
 
 <body>
-    <h1>Review EECS493 slides</h1>
+    <h1 id="title"></h1>
     </h1>
-    <div>Description: Review slides and prepare for midterm exam</div>
+    <div id="description"></div><br>
 
+    <div>Subtasks:</div>
     <ul id="subtaskList">
-        <div><input type="checkbox">Subtask 1: Review lecture 10 slide</div>
-        <div><input type="checkbox">Subtask 2: Review lecture 11 slide</div>
+        <!-- <div>Subtask 1: Review lecture 10 slide</div>
+        <div>Subtask 2: Review lecture 11 slide</div> -->
     </ul>
 
-    <section>
+    <!-- <section>
         <label for="newSubtask">Add New Subtask:</label>
         <input type="text" id="newSubtask" name="newSubtask">
         <button onclick="addSubtask()"> Add </button>
-    </section>
-
-    <br>
+    </section> -->
 
     <section>
         <label for="Status">Status:</label>
         <select id="Status" name="Status">
-            <option value="ToDo">TODO</option>
-            <option value="Doing">DOING</option>
-            <option value="Done">DONE</option>
+            <option value="TODO">TODO</option>
+            <option value="DOING">DOING</option>
+            <option value="DONE">DONE</option>
         </select>
     </section>
+
+    <br>
 
     <button type='button' id='returnToMain'>
         Return to main page
