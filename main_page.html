@@ -15,12 +15,11 @@
         <div class='outer-container'>
 
             <div class="dashboard">
-                <p> ALL BOARDS </p>
-                <div class="all-boards">
-                </div>
-                <button type='button' id='add_new_board'>
-                    + Add New Board
-                </button>
+                <div id='all_boards_text'>ALL BOARDS (3)</div>
+                <div class='boards_text' id='selected_board'>My todo list</div>
+                <div class='boards_text'>Interviews</div>
+                <div class='boards_text'>Clubs</div>
+                <div class='boards_text'>+ Create New Board</div>
             </div>  <!-- end dashboard -->
 
             
@@ -33,9 +32,9 @@
 
             <div class="taskboard">
                 <div class="all_columns">
-                    <div class="column">
-                        <div>TODO (2)</div>
-                        <div class="task">
+                    <div class="column" id="TODO">
+                        <div id="TODO_num">TODO (0)</div>
+                        <!-- <div class="task">
                             Review EECS493 slides
                             <br>
                             <div class="subtask">0 of 2 subtasks done</div>
@@ -44,24 +43,20 @@
                             Review EECS376 slides
                             <br>
                             <div class="subtask">0 of 2 subtasks done</div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="column">
-                        <div>DOING (1)</div>
-                        <div class="task">
+                    <div class="column" id="DOING">
+                        <div id="DOING_num">DOING (0)</div>
+                        <!-- <div class="task">
                             Do EECS489 Practice Exams
                             <br>
                             <div class="subtask">2 of 3 subtasks done</div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="column">
-                        <div>DONE (0)</div>
-                    </div>
-
-                    <div class="column">
-                        <div>+ Add New Column</div>
+                    <div class="column" id="DONE">
+                        <div id="DONE_num">DONE (0)</div>
                     </div>
                 </div>
             </div>  <!-- end taskboard -->
